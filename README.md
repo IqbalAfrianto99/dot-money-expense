@@ -26,6 +26,6 @@
 #### 4.Tantangan terbesar 
 ##### Navigasi: Ketika user dapat mengakses kembali screen yang seharusnya tidak bisa di akses lagi, seperti (Splash, Login) solusinya dengan merancang navigasi dengan baik, seperti kapan untuk menggunakan SwitchNavigator dan StackNavigator, dan juga dengan handle BackButton di screen yang di inginkan
 
-### 5. Performa dan Keamanan
-#### Performa : Menggunakan PNG atau webP daripada SVG untuk asset nya, menggunakan FlatList daripada ListView, Cache network image
-#### Kemanan : Tidak menyimpan API KEY di aplikasi, Hati hati ketika menyimpan data sensitive di AsyncStorage
+#### 5. Performa dan Keamanan
+##### Performa : Menggunakan PNG atau webP daripada SVG untuk asset nya, menggunakan FlatList daripada ListView, Cache network image
+##### Kemanan : Tidak menyimpan API KEY di aplikasi, Hati hati ketika menyimpan data sensitive di AsyncStorage
