@@ -125,6 +125,9 @@ function AddScreen() {
                 value={moment(date.value).format('dddd, D MMMM yyyy')}
                 editable={false}
               />
+              <View style={{ marginTop: 6 }}>
+                <Icon name='calendar' size={24} color={'#828282'} />
+              </View>
             </TouchableOpacity>
             {date.show && (
               <DateTimePicker

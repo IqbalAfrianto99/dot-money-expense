@@ -15,6 +15,10 @@ import CategoryExpenseCard from '../components/CategoryExpenseCard';
 import TodayExpenseCard from '../components/TodayExpenseCard';
 import FAB from '../components/FAB';
 
+// Styles
+import TextStyle from '../styles/TextStyle'
+import IconStyle from '../styles/IconStyle'
+
 // Services
 import { getTodaysExpense, getExpenseCategory } from '../services/Expense'
 
@@ -85,15 +89,15 @@ const MainScreen = ({ navigation }) => {
         <View style={styles.header}>
           <View style={styles.headerContent}>
             <View style={styles.avatarContainer}>
-              <Image style={styles.avatarImage} source={require('../assets/Vector.png')} />
+              <Image style={IconStyle.categoryImage} source={require('../assets/Vector.png')} />
             </View>
-            <Text style={styles.subtitleText}>Pengeluaran Anda Hari Ini</Text>
+            <Text style={TextStyle.subtitleText}>Pengeluaran Anda Hari Ini</Text>
             <NumberFormat
               value={total}
               thousandSeparator prefix={'Rp.'}
               displayType={'text'}
               renderText={(val) => (
-                <Text style={styles.titleText}>
+                <Text style={TextStyle.titleText}>
                   {val}
                 </Text>
               )}
@@ -102,7 +106,7 @@ const MainScreen = ({ navigation }) => {
         </View>
         <View style={styles.content}>
           <View style={{ marginHorizontal: 16, marginTop: 22 }}>
-            <Text style={styles.subtitleTextBlack}>Pengeluaran Berdasarkan Kategori</Text>
+            <Text style={TextStyle.subtitleTextBlack}>Pengeluaran Berdasarkan Kategori</Text>
             
             {/* {expenseCategory !== {} && (
               )} */}
@@ -116,7 +120,7 @@ const MainScreen = ({ navigation }) => {
               />
           </View>
           <View style={{ marginHorizontal: 20, marginBottom: 30, paddingRight: 10 }}>
-            <Text style={styles.subtitleTextBlack}>Semua Pengeluaran</Text>
+            <Text style={TextStyle.subtitleTextBlack}>Semua Pengeluaran</Text>
 
             <TodayExpenseCard data={expenses} />
           </View>
@@ -140,11 +144,6 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     opacity: 0.5
   },
-  avatarImage: {
-    marginTop: 'auto',
-    marginBottom: 'auto',
-    alignSelf: 'center'
-  },
   content: {
     flex: 2,
     marginBottom: 30
@@ -163,30 +162,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 20,
     marginLeft: 20
-  },
-  titleText: {
-    fontFamily: 'Open Sans',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    color: 'white',
-    fontSize: 24,
-    lineHeight: 33
-  },
-  subtitleText: {
-    fontFamily: 'Open Sans',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    color: 'white',
-    fontSize: 14,
-    lineHeight: 33
-  },
-  subtitleTextBlack: {
-    fontFamily: 'Open Sans',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    color: 'black',
-    fontSize: 14,
-    lineHeight: 33
   }
 });
 
